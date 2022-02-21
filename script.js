@@ -12,11 +12,11 @@ $(document).ready(function(){
 
         
     
-    $( ".card-img-overlay" ).hover(
+    $( "img" ).hover(
         function() {
-          $( this ).append( $( "<span> ***</span>" ) );
-        // }, function() {
-        //   $( this ).find( "span" ).last().remove();
+          $(".card-text").append( $( "<span>***</span>" ) );
+        }, function() {
+        $( this ).find( "span" ).last().remove();
         }
       ); 
 
