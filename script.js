@@ -19,14 +19,14 @@ $(document).ready(function(){
     $( ".card-img-overlay" ).hover(
         function() {
         //   $(".card-title").css({'visibility': 'visible'});
-          $( ".card-img-overlay").children(".card-text").not(".banner").css({'visibility': 'visible'});
+          $( this).children(".card-text").not(".banner").css({'visibility': 'visible'});
 
             console.log("hover");
             $( ".card-img-overlay").children(".card-text").css({'visibility': 'visible'});},
             function() {
-                $(".card-text").not(".banner").css({'visibility': 'hidden'});
+                $(this).not(".banner").css({'visibility': 'hidden'});
                 console.log("hover out");
-                $( ".card-img-overlay").children(".card-text").not(".banner").css({'visibility': 'hidden'});
+                $( this).children(".card-text").not(".banner").css({'visibility': 'hidden'});
               }
       ); 
 
