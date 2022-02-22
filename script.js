@@ -9,10 +9,12 @@ $(document).ready(function(){
 
     
     $("#banner").css({"font-size": "300%", "visibility": "visible"});
+    $('.card-text').not(".banner").css({"visibility":"hidden"});
 
     $('#commentHelpInline').hide();
     $('#userHelpInline').hide();
     $('#titleHelpInline').hide();
+
 
         
     
