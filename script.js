@@ -34,7 +34,7 @@ $(document).ready(function(){
 
       $("#banner").css({"font-size": "300%", "visibility": "visible"});
 
-
+              
     function buttonEnable(){
         let user = $('#inputUser').val();
         let title = $('#inputTitle').val();
@@ -99,14 +99,9 @@ $(document).ready(function(){
     
     $('#inputComment').change(function(){
         buttonEnable();
-
 });
-
     // $('#inputUser').change(function(){
     //     alert("The text has been changed.");
     //         $('#submitBtn').prop('disabled', false);
     //     });
-
-    
-
     });
