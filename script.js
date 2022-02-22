@@ -1,10 +1,14 @@
 $(document).ready(function(){
+    
+    $("#banner").css({"font-size": "300%", "visibility": "visible"});
     $(".card-img-overlay").css({"border": "5px solid green"});
     $(".card-title").css({"text-shadow": " 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black", "color": "yellow", "font-size": "200%"});
-    $(".card-text").css({"text-shadow": " 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black"});
+    $(".card-text, #catalog").css({"text-shadow": " 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black"});
+
+    $('#submitBtn').css({"background-color": "purple", "color": "white", "border":"2px solid yellow"})
 
     
-    $("#banner").css({"font-size": "300%"});
+    $("#banner").css({"font-size": "300%", "visibility": "visible"});
 
     $('#commentHelpInline').hide();
     $('#userHelpInline').hide();
@@ -12,13 +16,22 @@ $(document).ready(function(){
 
         
     
-    $( "img" ).hover(
+    $( ".card-img-overlay" ).hover(
         function() {
-          $(".card-text").append( $( "<span>***</span>" ) );
-        }, function() {
-        $( this ).find( "span" ).last().remove();
-        }
+        //   $(".card-title").css({'visibility': 'visible'});
+          $( ".card-img-overlay").children(".card-text").not(".banner").css({'visibility': 'visible'});
+
+            console.log("hover");
+            $( ".card-img-overlay").children(".card-text").css({'visibility': 'visible'});},
+            function() {
+                $(".card-text").not(".banner").css({'visibility': 'hidden'});
+                console.log("hover out");
+                $( ".card-img-overlay").children(".card-text").not(".banner").css({'visibility': 'hidden'});
+              }
       ); 
+
+      $("#banner").css({"font-size": "300%", "visibility": "visible"});
+
 
     function buttonEnable(){
         let user = $('#inputUser').val();
@@ -28,6 +41,11 @@ $(document).ready(function(){
             $('#submitBtn').prop('disabled', false);
         }
     }
+
+    // $("img").hover(function(){
+    //     var $x = $(".card-title");
+    //     $x.prop("visibility", "visible");
+    //   });
 
     let user = $('#inputUser').val();
     let title = $('#inputTitle').val();

@@ -6,3 +6,9 @@
 .card-text{word-wrap: break-word; }
 
 h5 {font-size: 200%;}
+
+.hover{
+    display: none;
+    background:white;
+    position: absolute;
+}
